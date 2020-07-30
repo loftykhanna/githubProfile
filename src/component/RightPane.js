@@ -467,12 +467,12 @@ function RightPane(props) {
             </div>
 
             <div id="user-repositories-list">
-              <ul
+             { repoDetails.length ? <ul
                 data-filterable-for="your-repos-filter"
                 data-filterable-type="substring"
               >
-                {repoDetails.length && repoList()}
-              </ul>
+                {repoList()}
+              </ul> : <h2> No repo to show</h2>}
             </div>
           </div>
         </div>
